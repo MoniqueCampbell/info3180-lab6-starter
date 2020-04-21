@@ -55,12 +55,13 @@ const NewsList = Vue.component('news-list', {
         <h2>News</h2>
         <ul class="news__list">
         <li v-for="article in articles"class="news__item">
-        <b>{{ article.title }}</b><br><img :src="article.urlToImage"></br><br>{{article.description}}</br></li>
+        <b>{{ article.title }}</b><br><img :src="article.urlToImage"></br><br>{{article.description}}</br></li></ul>
       </div>
     `,
     created: function() {
      let self = this;
-     fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=your-api-key').then(function(response) {
+     fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=apiKey')
+     .then(function(response) {
       return response.json();
      }).then(function(data) {
       console.log(data);
