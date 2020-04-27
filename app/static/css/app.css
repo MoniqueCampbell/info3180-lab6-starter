@@ -20,6 +20,8 @@ img {
 	grid-auto-flow: row;
 	width: 100%;
 	grid-gap: 5%;
+	background-color: white;
+	color: black;
 }
 
 ul{ 
